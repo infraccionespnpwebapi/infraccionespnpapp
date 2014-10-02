@@ -2,4 +2,4 @@ infraccionespnpapp
 ==================
 
 app mobile android
-Derechos reservados
+Derechos reservados.

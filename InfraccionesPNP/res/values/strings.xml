@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">InfraccionesPNP</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <color name="color_fondo_ingresar">#F4FFFF</color>
+    <color name="color_fondo_formularios">#B8EBCA</color>
+    <string name="spinner_prompt">Tipo de infraccion</string>
+    
+    <string-array name="array_MarcaVehiculos">
+        <item>Toyota</item>
+        <item>Nissan</item>
+		<item>Hyundai</item>
+		<item>Kia</item>
+		<item>Mazda</item>
+		<item>Volkswagen</item>
+	</string-array>
+	
+    <string-array name="array_CategLicencia">
+        <item>Clase "A" Categoría I</item>
+        <item>Clase "A" Categoría II - A</item>
+		<item>Clase "A" Categoría II - B</item>
+		<item>Clase "A" Categoría III - A</item>
+		<item>Clase "A" Categoría III - B</item>
+		<item>Clase "A" Categoría III - C</item>
+	</string-array>
+	
+    <string-array name="array_CodigoInfracciones">
+        <item>Toyota</item>
+        <item>Nissan</item>
+	</string-array>
+	
+</resources>
