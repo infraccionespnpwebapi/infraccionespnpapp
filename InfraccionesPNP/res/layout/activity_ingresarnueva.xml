@@ -1,379 +1,388 @@
-
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" 
-    android:background="@color/color_fondo_formularios" > 
-    
-    <ScrollView 
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fillViewport="true"
-    android:orientation="vertical" >
+    android:layout_height="match_parent"
+    android:background="@color/color_fondo_formularios" >
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+    <ScrollView 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true"
         android:orientation="vertical" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal" 
-            android:layout_marginLeft="10dp"
- 			android:layout_marginRight="10dp">
-
-            <TextView
-                android:id="@+id/textView1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="right" 
-                android:layout_weight="1"
-                android:text="Fecha: "
-                android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <TextView
-                android:id="@+id/tvFechaInfraccion"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"  
-                android:layout_weight="1"              
-                android:text="26/08/14"
-                android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutSobreLaInfraccion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_fondo_ingresar"
-            android:orientation="vertical" 
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
- 			android:layout_marginRight="10dp">
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sobre la infracción"
-                android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tipo"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                <Spinner
-                    android:id="@+id/spinner1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" 
-                    android:prompt="@string/spinner_prompt" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Código"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-                <Spinner
-                    android:id="@+id/spinnerCategInfraccion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-            </LinearLayout>
+            android:layout_marginTop="20dp"
+            android:orientation="vertical" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal" >
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/textView1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Avenida/Jirón/Calle"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                <EditText
-                    android:id="@+id/etCalle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10" >
-
-                    <requestFocus />
-                </EditText>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Distrito"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-
-                <Spinner
-                    android:id="@+id/spinnerDistritos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-        
-        <LinearLayout
-            android:id="@+id/linearLayoutDatosDelConductor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_fondo_ingresar"
-            android:orientation="vertical" 
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
- 			android:layout_marginRight="10dp">
-
-            <TextView
-                android:id="@+id/textView21"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Datos del conductor"
-                android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:id="@+id/labelApellidos"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:text="Apellidos:"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-				<TextView
-                    android:id="@+id/tvApellidos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="..."
-                    android:textAppearance="?android:attr/textAppearanceSmall" /> 
-            </LinearLayout>
-
-           <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:id="@+id/labelNombres"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:text="Nombres: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-				<TextView
-                    android:id="@+id/tvNombres"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="..."
-                    android:textAppearance="?android:attr/textAppearanceSmall" /> 
-            </LinearLayout>
-            
-           <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:id="@+id/labelDNI"
-                    android:layout_width="70dp"
-                    android:layout_height="wrap_content"
-                    android:text="DNI: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-				<TextView
-                    android:id="@+id/tvDNI"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="42689793"
-                    android:textAppearance="?android:attr/textAppearanceSmall" /> 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" 
-                android:orientation="vertical" >
-                <TextView
-                    android:id="@+id/textView61"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nro. Licencia de conducir: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-                <EditText
-                    android:id="@+id/etNroLicencia"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number" 
-                    android:layout_marginLeft="40dp" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical" >
+                    android:gravity="right"
+                    android:text="Fecha: "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:id="@+id/labelCategLicencia"
+                    android:id="@+id/tvFechaInfraccion"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Categoría licencia de conducir:"
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-                <Spinner
-                    android:id="@+id/spinnerCategLicencia"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" 
-                    android:layout_marginLeft="40dp" 
-                    android:entries="@array/array_CategLicencia" />
-            </LinearLayout>
-        </LinearLayout>
-        
-        <LinearLayout
-            android:id="@+id/linearLayoutDatosDelVehiculo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/color_fondo_ingresar"
-            android:orientation="vertical" 
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
- 			android:layout_marginRight="10dp">
-            <TextView
-                android:id="@+id/tvDatosVehiculo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Datos del vehículo"
-                android:textStyle="bold"
-                android:textAppearance="?android:attr/textAppearanceMedium" /> 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" 
-                android:orientation="vertical" >
-                <TextView
-                    android:id="@+id/labelNroTarjetaProp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nro. tarjeta de propiedad: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-                <EditText
-                    android:id="@+id/etNroTarjetaProp"
-                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="number" 
-                    android:layout_marginLeft="40dp" />
+                    android:text="..."
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
+                android:id="@+id/linearLayoutSobreLaInfraccion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_fondo_ingresar"
                 android:orientation="vertical" >
+
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Número de placa de rodaje: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
+                    android:text="Sobre la infracción"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" 
-                    android:layout_marginLeft="40dp" >
-                    <RadioButton
-                        android:id="@+id/radioButton1"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView4"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Nro.: " 
+                        android:text="Código y Tipo"
                         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spinnerCategInfraccion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Avenida/Jirón/Calle"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
                     <EditText
-                        android:id="@+id/editText1"
+                        android:id="@+id/etCalle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10" >
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Distrito"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spinnerDistritos"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:ems="10" />
+                        android:entries="@array/array_Distritos" />
                 </LinearLayout>
-                <RadioButton
-                    android:id="@+id/radioButton2"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDatosDelConductor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_fondo_ingresar"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView21"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Sin placa" 
-                    android:textAppearance="?android:attr/textAppearanceSmall" 
-                    android:layout_marginLeft="40dp"/>
-            </LinearLayout>   
-                     
+                    android:text="Datos del conductor"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/labelApellidos"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Apellidos:"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tvApellidos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/labelNombres"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nombres: "
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tvNombres"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="..."
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/labelDNI"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="DNI: "
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <TextView
+                        android:id="@+id/tvDNI"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="42689793"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/textView61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nro. Licencia de conducir: "
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etNroLicencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/labelCategLicencia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Categoría licencia de conducir:"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spinnerCategLicencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:entries="@array/array_CategLicencia" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutDatosDelVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/color_fondo_ingresar"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvDatosVehiculo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Datos del vehículo"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:id="@+id/labelNroTarjetaProp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nro. tarjeta de propiedad: "
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/etNroTarjetaProp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="number" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"                      
+                     >
+
+                    <TextView 
+                        android:id="@+id/textView7" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="Número de placa de rodaje: " 
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                    
+                    <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" 
+                        android:layout_marginLeft="40dp">
+
+                        <LinearLayout 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content" >
+	                        <RadioButton 
+	                            android:id="@+id/radioNroPlaca" 
+	                            android:layout_width="wrap_content" 
+	                            android:layout_height="wrap_content" 
+	                            android:text="Nro.: " 
+	                            android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	                        <EditText 
+	                            android:id="@+id/editText1" 
+	                            android:layout_width="wrap_content" 
+	                            android:layout_height="wrap_content" 
+	                            android:layout_weight="1" 
+	                            android:ems="10" />
+                    	</LinearLayout>
+
+                        <RadioButton
+                            android:id="@+id/radioSinPlaca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sin Placa" />
+                    </RadioGroup>
+
+                    
+
+                    
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/labelMarca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Marca: "
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                    <Spinner
+                        android:id="@+id/spinnerMarca"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:drawSelectorOnTop="true"
+                        android:entries="@array/array_MarcaVehiculos" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/tvAnioFabricacion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Año de fabricación: "
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                   
+                    
+                </LinearLayout>
+            </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:id="@+id/labelMarca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Marca: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-                <Spinner
-                    android:id="@+id/spinnerMarca"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawSelectorOnTop="true"
-        			android:entries="@array/array_MarcaVehiculos"
-                    android:layout_weight="1" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
-                <TextView
-                    android:id="@+id/tvAnioFabricacion"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Año de fabricación: "
-                    android:textAppearance="?android:attr/textAppearanceSmall" />
-                <!-- <DatePicker
-                    android:id="@+id/datePicker1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" 
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:orientation="vertical" >
 
-                    android:inputType="date" /> -->
+                <Button
+                    android:id="@+id/btnSiguiente1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:drawableLeft="@android:drawable/ic_menu_send"
+                    android:gravity="center"
+                    android:text="Siguiente"
+                    android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" 
-            android:gravity="center"
-            android:layout_marginLeft="10dp"
- 			android:layout_marginRight="10dp"
- 			android:layout_marginTop="20dp"> 
-             <Button
-		        android:id="@+id/btnSiguiente1"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content"
-		        android:gravity="center"
-		        android:drawableLeft="@android:drawable/ic_menu_send"
-		        android:text="Siguiente"
-		        android:textSize="14sp" />
-        </LinearLayout>
-
-    </LinearLayout>    
-</ScrollView> 
-    
+    </ScrollView>
 
 </RelativeLayout>

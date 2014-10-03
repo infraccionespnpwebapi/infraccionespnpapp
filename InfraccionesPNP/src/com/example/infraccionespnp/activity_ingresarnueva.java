@@ -1,50 +1,46 @@
 package com.example.infraccionespnp;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-
-//import android.widget.TextView;
+import android.widget.TextView;
 
 public class activity_ingresarnueva extends Activity {
 
-	//Date now = new Date();
-	//TextView tvFecha = (TextView)this.findViewById(R.id.tvFechaInfraccion);
 	Spinner spinnerCodigoInfracc;
-	
+	TextView tvFechaActual;
 	
 	protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingresarnueva);
-        
-        //tvFecha.setText(now.toString()); //sin formato
-        //tvFecha.setText(obtenerFechaActual());
         llenarSpinnerCodInfrac();
-    }
+        setearFechaActual();        
+    }	
 	
-//	private String obtenerFechaActual(){
-//		Date d = Calendar.getInstance().getTime(); // Current time
-//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm"); // Set your date format        
-//        return sdf.format(d); // Get Date String according to date format
-//	}
+	private void setearFechaActual(){
+		final Calendar c = Calendar.getInstance();
+        int anio = c.get(Calendar.YEAR);
+        int mes = c.get(Calendar.MONTH);
+        int dia = c.get(Calendar.DAY_OF_MONTH);
+        
+        tvFechaActual = (TextView)this.findViewById(R.id.tvFechaInfraccion);
+        tvFechaActual.setText(Integer.toString(dia) + "/" + Integer.toString(mes) + "/" + Integer.toString(anio));
+	}
 	
 	//llenar el spinner con el codigo de las infracciones
 	private void llenarSpinnerCodInfrac(){
 		
 		spinnerCodigoInfracc = (Spinner)this.findViewById(R.id.spinnerCategInfraccion);		
 		List<String> lista = new ArrayList<String>();
-		ArrayList<String> listaMuyGraves = new ArrayList<String>();
-		ArrayList<String> listaGraves = new ArrayList<String>();
-		ArrayList<String> listaLeves = new ArrayList<String>();
-		ArrayList<ArrayList<String>> lista1 = new ArrayList<ArrayList<String>>();
-		
+		List<String> listaMuyGraves = new ArrayList<String>();
+		List<String> listaGraves = new ArrayList<String>();
+		List<String> listaLeves = new ArrayList<String>();		
 				
-		//List<SomeBean> newList = new ArrayList<SomeBean>(otherList);
-		
 		for(int x = 1; x < 71; x++) 
 		{
 			if( x<40 )
@@ -65,14 +61,21 @@ public class activity_ingresarnueva extends Activity {
 				else listaGraves.add("G" + x + " - Grave");
 			}	
 	    }
-
-		lista1.add(listaLeves);
 		
+		llenarListaConOtrasListas(listaGraves, lista);
+		llenarListaConOtrasListas(listaMuyGraves, lista);
+		llenarListaConOtrasListas(listaLeves, lista);
 		
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, lista);
-		//dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerCodigoInfracc.setAdapter(dataAdapter);
+	}
+	
+	private List<String> llenarListaConOtrasListas(List<String> lista_contenido, List<String> lista_para_llenar){		
+		for (int i = 0; i < lista_contenido.size(); ++i) {
+			lista_para_llenar.add(lista_contenido.get(i));
+		    }
+		return lista_para_llenar;
 	}
 	
 }

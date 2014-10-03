@@ -42,57 +42,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textSize="15dp" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout2"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/tvSiglas"
-        android:layout_marginTop="27dp" >
-
-        <TextView
-            android:id="@+id/tvLabelUser"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Usuario: "
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <EditText
-            android:id="@+id/etUsuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:ems="10"
-            android:inputType="textPersonName" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tvPNP"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/linearLayout1" >
-
-        <TextView
-            android:id="@+id/tvLabelClave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Clave: "
-            android:textAppearance="?android:attr/textAppearanceSmall" />
-
-        <EditText
-            android:id="@+id/etClave"
-            android:layout_width="204dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:ems="10"
-            android:inputType="textPassword" />
-    </LinearLayout>
-
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
@@ -106,35 +55,48 @@
         android:scaleType="fitCenter"
         android:src="@drawable/logopnp1" />
 
-    <!-- <ImageButton
-        android:id="@+id/imageButton1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox1"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:text="Ingresar"
-        android:src="@android:drawable/ic_lock_lock" /> -->
-    
-    <!-- android:drawableLeft="@android:drawable/btn_star_big_on" -->
-
     <Button
         android:id="@+id/btnIngresar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/chbRecordarUsuarioClave"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:drawableLeft="@android:drawable/ic_lock_lock"        
-        android:text="Ingresar" 
-        android:onClick="eventoValidarLogin"/>
+        android:layout_marginBottom="16dp"
+        android:drawableLeft="@android:drawable/ic_lock_lock"
+        android:onClick="eventoValidarLogin"
+        android:text="Ingresar" />
 
-    <CheckBox
-        android:id="@+id/chbRecordarUsuarioClave"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/linearLayout2"
-        android:layout_below="@+id/linearLayout2"
-        android:text="Recordar" />
+        android:layout_above="@+id/btnIngresar"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/etUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/username"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/etClave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:layout_marginTop="4dp"
+            android:layout_weight="0.84"
+            android:fontFamily="sans-serif"
+            android:hint="@string/password"
+            android:inputType="textPassword" />
+    </LinearLayout>
 
 </RelativeLayout>
