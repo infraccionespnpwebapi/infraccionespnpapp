@@ -25,6 +25,7 @@
         </activity>
         <activity android:name="activity_busquedadni"></activity>
         <activity android:name="activity_ingresarnueva"></activity>
+        <activity android:name="activity_confirmarenvio"></activity>
     </application>
 
 </manifest>
