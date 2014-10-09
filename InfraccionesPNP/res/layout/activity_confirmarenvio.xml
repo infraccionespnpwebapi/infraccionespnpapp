@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:background="@color/color_fondo_ingresar">
+    
+    <LinearLayout
+       android:id="@+id/linearLayoutConfirmarEnvio"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginTop="30dp"
+       
+       android:orientation="vertical" >
+
+             <TextView
+                 android:id="@+id/textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Confirmación de envío"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold" />
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical"
+                 android:layout_marginTop="30dp" >                    
+	                 <Button
+				        android:id="@+id/btnIngresar"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:layout_centerHorizontal="true"
+				        android:layout_gravity="center_horizontal"
+				        android:layout_marginLeft="25dp"
+				        android:layout_marginRight="25dp"
+				        android:drawableLeft="@drawable/sms_bubble_icon_32px"				        
+				        android:onClick="eventoValidarLogin"
+				        android:text="Solicitar Clave dinámica SMS" 
+				        android:textSize="12sp"				        
+				        android:adjustViewBounds="true" />
+	                 <TextView
+	                     android:id="@+id/textView1"
+	                     android:layout_width="wrap_content"
+	                     android:layout_height="wrap_content"
+	                     android:layout_marginRight="25dp"
+	                     android:layout_gravity="right"
+	                     android:text="*La clave SMS tiene una vigencia de 3min"
+	                     android:textAppearance="?android:attr/textAppearanceSmall"
+	                     android:textSize="9sp" />
+	                 <LinearLayout
+	                     android:layout_width="fill_parent"                        
+	                     android:layout_height="wrap_content" 
+	                     android:layout_marginTop="20dp">
+	                      <TextView
+					            android:id="@+id/labelIngresarClaveSMS"
+					            android:layout_width="wrap_content"
+					            android:layout_height="wrap_content"
+					            android:text="Ingresar clave SMS:"
+					            android:textAppearance="?android:attr/textAppearanceSmall" />
+	                      <EditText
+	                          android:id="@+id/etClaveSMS"
+	                          android:layout_width="wrap_content"
+	                          android:layout_height="wrap_content"
+	                          android:layout_weight="1" >
+	                          <requestFocus />
+	                      </EditText>				        
+	                 </LinearLayout>
+                 	<Button
+                 	    android:clickable="false"
+				        android:id="@+id/btnEnviarPapeleta"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:layout_alignParentBottom="true"				        
+				        android:layout_gravity="center_horizontal"
+				        android:layout_marginTop="60dp"
+				        android:layout_marginBottom="16dp"
+				        android:drawableLeft="@android:drawable/checkbox_on_background"
+				        android:onClick="eventoValidarLogin"
+				        android:text="Registar Infraccion" 
+				        android:textSize="15sp"
+				        />			                    
+             </LinearLayout>
+             
+         </LinearLayout>
+
+</RelativeLayout>

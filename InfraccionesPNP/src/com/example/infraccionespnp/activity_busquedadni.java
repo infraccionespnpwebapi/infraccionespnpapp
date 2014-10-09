@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 //import android.widget.Toast;
 
@@ -16,10 +15,8 @@ public class activity_busquedadni extends Activity {
 
 	LinearLayout layoutResultados;
 	EditText etNroDNI;
-	ProgressBar progBarBuscarDNI; 
 	RadioGroup radioGroupEscogerOpcion;
-	RadioButton rbIngresarPapeleta;
-	RadioButton rbConsultarHistorial;
+	ProgressBar progBarBuscarDNI = (ProgressBar)this.findViewById(R.id.progressBarBuscarDNI);	
 	
 	//llamar al segundo activity
 	@Override
@@ -36,35 +33,27 @@ public class activity_busquedadni extends Activity {
 		
 		etNroDNI = (EditText)findViewById(R.id.etNumeroDNI);
 		String numeroDNI = etNroDNI.getText().toString();
+		int n = numeroDNI.length();
 		
-		//visibilidad del progressbar
-		progBarBuscarDNI = (ProgressBar)this.findViewById(R.id.progressBarBuscarDNI);
-		progBarBuscarDNI.setVisibility(ProgressBar.VISIBLE);
-		
-		//validar que el numero de DNI sea un numero de 8 digitos y no este en blanco
-//		if(numeroDNI.trim().length() > 0){		
-//			layoutResultados.setVisibility(LinearLayout.VISIBLE);
-//		}
-//		else{
-//			Toast.makeText(getBaseContext(), "El número de DNI ", Toast.LENGTH_SHORT).show();
-//		}
-		
-		if(!TextUtils.isEmpty(numeroDNI)){
-			layoutResultados.setVisibility(LinearLayout.VISIBLE);
-			//txtUserName.setError("Your message");			
+		//validando el número de DNI
+		if (TextUtils.isEmpty(numeroDNI)){
+			etNroDNI.setError("Por favor ingrese el número de DNI");		
 		}
-		//contar el numero de digitos
-//		else if (){
-//		}
 		else{
-			etNroDNI.setError("Por favor ingrese el número de DNI");
-			//Toast.makeText(getBaseContext(), "Por favor ingrese el número de DNI", Toast.LENGTH_SHORT).show();
+			if(n==8){				
+				progBarBuscarDNI.setVisibility(ProgressBar.VISIBLE);
+				
+				//enviar el número para consultar la base de datos
+				//...si devuelve resultados, muestra el layout:
+				
+				progBarBuscarDNI.setVisibility(ProgressBar.GONE);
+				layoutResultados.setVisibility(LinearLayout.VISIBLE);
+			}
+			else if(n<8 || n>8) etNroDNI.setError("El número de DNI debe tener 8 dígitos");
 		}
 	}
 
 	public void eventoNuevaOhistorial(View v){		
-		
-		//rbIngresarPapeleta = (RadioButton)this.findViewById(R.id.radioIngresarPapeleta);
 		radioGroupEscogerOpcion = (RadioGroup)findViewById(R.id.radioGroupOpciones);
 			
 		int id = radioGroupEscogerOpcion.getCheckedRadioButtonId();

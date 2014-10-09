@@ -1,9 +1,9 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_fondo_formularios" >
+    android:background="@color/color_fondo_formularios" > -->
 
-    <ScrollView 
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:fillViewport="true"
@@ -43,6 +43,7 @@
                     android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- Sobre la infraccion -->
             <LinearLayout
                 android:id="@+id/linearLayoutSobreLaInfraccion"
                 android:layout_width="match_parent"
@@ -120,7 +121,8 @@
                         android:entries="@array/array_Distritos" />
                 </LinearLayout>
             </LinearLayout>
-
+            
+            <!-- Datos del conductor -->
             <LinearLayout
                 android:id="@+id/linearLayoutDatosDelConductor"
                 android:layout_width="match_parent"
@@ -373,16 +375,17 @@
                 android:orientation="vertical" >
 
                 <Button
-                    android:id="@+id/btnSiguiente1"
+                    android:id="@+id/btnIrAConfirmacion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
                     android:drawableLeft="@android:drawable/ic_menu_send"
                     android:gravity="center"
                     android:text="Siguiente"
-                    android:textSize="14sp" />
+                    android:textSize="14sp" 
+                    android:onClick="btnClickIrAFormularioDeConfirmacion"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-</RelativeLayout>
+<!-- </RelativeLayout> -->
