@@ -5,9 +5,11 @@ import java.util.Calendar;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -72,8 +74,7 @@ public class activity_ingresarnueva extends Activity {
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerCodigoInfracc.setAdapter(dataAdapter);
 	}
-	
-	
+		
 	  //menu
 	  @Override
 	  public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,10 +95,16 @@ public class activity_ingresarnueva extends Activity {
 	      return super.onOptionsItemSelected(item);
 	  }
 	  
+	  public void btnEventoIrAFormularioDeConfirmacion(View v){
+		  
+		  Intent intent = new Intent(this, activity_confirmarenvio.class);
+		  startActivity(intent);
+	  }
+	  
 	  private List<String> llenarListaConOtrasListas(List<String> lista_contenido, List<String> lista_para_llenar){		
 			for (int i = 0; i < lista_contenido.size(); ++i) {
 				lista_para_llenar.add(lista_contenido.get(i));
 			    }
 			return lista_para_llenar;
-		}	  
+	   }	
 }

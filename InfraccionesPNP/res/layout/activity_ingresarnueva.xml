@@ -1,9 +1,9 @@
-<!-- <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color_fondo_formularios" > -->
+    android:background="@color/color_fondo_formularios" > 
 
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    <ScrollView 
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:fillViewport="true"
@@ -324,9 +324,6 @@
                             android:layout_height="wrap_content"
                             android:text="Sin Placa" />
                     </RadioGroup>
-
-                    
-
                     
                 </LinearLayout>
 
@@ -360,8 +357,6 @@
                         android:layout_height="wrap_content"
                         android:text="Año de fabricación: "
                         android:textAppearance="?android:attr/textAppearanceSmall" />
-                   
-                    
                 </LinearLayout>
             </LinearLayout>
 
@@ -373,7 +368,6 @@
                 android:layout_marginTop="20dp"
                 android:gravity="center"
                 android:orientation="vertical" >
-
                 <Button
                     android:id="@+id/btnIrAConfirmacion"
                     android:layout_width="wrap_content"
@@ -383,9 +377,9 @@
                     android:gravity="center"
                     android:text="Siguiente"
                     android:textSize="14sp" 
-                    android:onClick="btnClickIrAFormularioDeConfirmacion"/>
+                    android:onClick="btnEventoIrAFormularioDeConfirmacion"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
-<!-- </RelativeLayout> -->
+</RelativeLayout> 
